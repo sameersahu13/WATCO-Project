@@ -1,0 +1,790 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>WATCO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- Table datatable css -->
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.html" rel="stylesheet" type="text/css" />
+
+    <!-- Picker css -->
+    <link href="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Selectpicker css -->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+
+    <!-- Multiselect css -->
+    <link href="assets/css/multiselect.css" rel="stylesheet" />
+    <script src="assets/js/multiselect.min.js"></script>
+
+    <!-- C3 Chart css -->
+    <link href="assets/libs/c3/c3.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle  waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="mdi mdi-bell noti-icon"></i>
+                        <span class="badge badge-success rounded-circle noti-icon-badge">4</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                            <h5 class="font-16 m-0">
+                                <span class="float-right">
+                                    <a href="#" class="text-dark">
+                                        <small>Clear All</small>
+                                    </a>
+                                </span>Notification
+                            </h5>
+                        </div>
+
+                        <div class="slimscroll noti-scroll">
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-success">
+                                    <i class="mdi mdi-settings-outline"></i>
+                                </div>
+                                <p class="notify-details">New settings
+                                    <small class="text-muted">There are new settings available</small>
+                                </p>
+                            </a>
+                    
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-info">
+                                    <i class="mdi mdi-bell-outline"></i>
+                                </div>
+                                <p class="notify-details">Updates
+                                    <small class="text-muted">There are 2 new updates available</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-danger">
+                                    <i class="mdi mdi-account-plus"></i>
+                                </div>
+                                <p class="notify-details">New user
+                                    <small class="text-muted">You have 10 unread messages</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-info">
+                                    <i class="mdi mdi-comment-account-outline"></i>
+                                </div>
+                                <p class="notify-details">Caleb Flakelar commented on Admin
+                                    <small class="text-muted">4 days ago</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-secondary">
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                                <p class="notify-details">Carlos Crouch liked
+                                    <b>Admin</b>
+                                    <small class="text-muted">13 days ago</small>
+                                </p>
+                            </a>
+                        </div>
+
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                            See all Notification
+                            <i class="fi-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </li>
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <!-- <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle"> -->
+                        <span class="user-noty"><img src="assets/images/users/avatar-1.jpg"></span>
+                        <span class="d-none d-sm-inline-block ml-1">Tarini Prasad</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                        
+                        <!-- item-->
+                        <a href="profile-settings.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-settings-outline"></i>
+                            <span>Profile Settings</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <!-- item-->
+                        <a href="change-password.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-key-outline"></i>
+                            <span>Change Password</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-logout-variant"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="dashboard.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <img src="assets/images/logo.png" alt="" height="63">
+                        <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                    </span>
+                    <span class="logo-sm">
+                        <!-- <span class="logo-sm-text-dark">Z</span> -->
+                        <img src="assets/images/logo-sm.png" alt="" height="54">
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect">
+                        <i class="mdi mdi-menu-open "></i>
+                    </button>
+                </li>
+                <li>
+                    <h4 class="top-title">ASSET INFORMATION MANAGEMENT SYSTEM</h4>
+                </li>
+            </ul>
+        </div>
+        <!-- end Topbar --> 
+        
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+                <div class="slimscroll-menu">
+    
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+    
+                        <ul class="metismenu" id="side-menu">
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Dashboard </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="dashboard.html">Water Supply</a></li>
+                                    <li><a href="#">Swerage Service</a></li>
+                                    <li><a href="#">Drink From Tap</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="map.html" class="waves-effect waves-light">
+                                    <i class="mdi mdi-map"></i>
+                                    <span> Map View </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light active">
+                                    <i class="mdi mdi-account-badge-horizontal-outline"></i>
+                                    <span> MIS Report </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="mis-report.html">Asset Information</a></li>
+                                    <li><a href="#">Consumer Information</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="mdi mdi-pencil-box-multiple"></i>
+                                    <span> Update Info </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="consumer.html">Consumer</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="mdi mdi-account-multiple-outline"></i>
+                                    <span> User Management </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="view-user.html">View User</a></li>
+                                    <li><a href="manage-user.html">Manage User</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+    
+                    </div>
+                    <!-- End Sidebar -->
+    
+                </div>
+                <!-- Sidebar -left -->
+    
+            </div>
+            <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard </a></li>
+                                        <li class="breadcrumb-item active">MIS Report</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">MIS Report</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row form-group">
+                                            <div class="col-md-3">
+                                                <label>Asset Type<span class="text-danger">*</span></label>
+                                                <select class="form-control">
+                                                    <option selected="selected">-- Select Asset_Type --</option>
+                                                    <option>Water Supply</option>
+                                                    <option>Sewerage</option>
+                                                </select>
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Asset Name<span class="text-danger">*</span></label>
+                                                <select class="form-control">
+                                                    <option selected="selected">-- Select Asset --</option>
+                                                    <option>Reservoir</option>
+                                                    <option>Intake</option>
+                                                </select>
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>District <span class="text-danger">*</span></label>
+                                                <select class="form-control">
+                                                    <option selected="selected">-- Select District --</option>
+                                                    <option>Angul</option>
+                                                    <option>Cuttack</option>
+                                                </select>
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Region <span class="text-danger">*</span></label>
+                                                <select class="form-control">
+                                                    <option selected="selected">-- Select Region --</option>
+                                                    <option>Bhubaneswar</option>
+                                                    <option>Khordha</option>
+                                                </select>
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-md-3">
+                                                <label>Division <span class="text-danger">*</span></label>
+                                                <select class="form-control">
+                                                    <option selected="selected">-- Select Division --</option>
+                                                    <option>Division-I</option>
+                                                    <option>Division-II</option>
+                                                </select>
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Sub-Division <span class="text-danger">*</span></label>
+                                                <select class="form-control">
+                                                    <option selected="selected">-- Select Sub-Division --</option>
+                                                    <option>Sub-Division-I</option>
+                                                    <option>Sub-Division-II</option>
+                                                </select>
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Section</label>
+                                                <select class="form-control">
+                                                    <option selected="selected">-- Select Section --</option>
+                                                    <option>Angul</option>
+                                                    <option>Cuttack</option>
+                                                </select>
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Status</label>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox1" type="checkbox">
+                                                    <label for="checkbox1">
+                                                        Click Here
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-md-3">
+                                                <label>From Date <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>To Date <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker2">
+                                                <span class="text-danger small"></span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <button type="button" class="btn btn-success btn-sm waves-effect waves-light">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            
+                                            <div class="table-responsive">
+                                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Sl. No.</th>
+                                                            <th>Asset Type</th>
+                                                            <th>Asset</th>
+                                                            <th>From Date</th>
+                                                            <th>To Date</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>18.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>23.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>28.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>02.01.2021</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>06.01.2021</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>18.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>23.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>28.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>02.01.2021</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>06.01.2021</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>18.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>23.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>28.12.2020</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>02.01.2021</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>Water Supply</td>
+                                                            <td>Reservoir</td>
+                                                            <td>06.01.2021</td>
+                                                            <td>12.07.2021</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-success btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewReport"><i class="fa fa-eye"></i></a>
+                                                                <a href="#" class="btn btn-info btn-xs waves-effect waves-light" data-toggle="modal" data-target="#modalViewMap"><i class="fa fa-map-marker"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+
+            
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            &copy; 2021. Water Corporation of Odisha (WATCO). All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalViewReport" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Report Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td width="25%"><strong>Asset Type :</strong></td>
+                                    <td width="25%">Water Supply</td>
+                                    <td width="25%"><strong>Asset Name :</strong></td>
+                                    <td width="25%">Reservoir</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>District :</strong></td>
+                                    <td>Khordha</td>
+                                    <td><strong>Region :</strong></td>
+                                    <td>Bhubaneswar</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Division :</strong></td>
+                                    <td>Division-I</td>
+                                    <td><strong>Sub-Division :</strong></td>
+                                    <td>Sub-Division-1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalViewMap" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Map View</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59883.72851777675!2d85.79219437910159!3d20.269903800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a767e4057767%3A0xa54c92a61b5498d4!2sWATCO!5e0!3m2!1sen!2sin!4v1610188025616!5m2!1sen!2sin" width="100%" height="450px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modal -->
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/libs/custombox/custombox.min.js"></script>
+
+    <!-- Datatable plugin js -->
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.html"></script>
+    <script src="assets/libs/datatables/copy_csv_xls_pdf.swf"></script>
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+    <!-- Picker js-->
+    <script src="assets/libs/moment/moment.min.js"></script>
+    <script src="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/clockpicker/bootstrap-clockpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Init js-->
+    <script src="assets/js/pages/form-pickers.init.js"></script>
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!--C3 Chart-->
+    <script src="assets/libs/d3/d3.min.js"></script>
+    <script src="assets/libs/c3/c3.min.js"></script>
+
+    <!-- Init js -->
+    <script src="assets/js/pages/c3.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/pages/portlet.init.js"></script>
+
+    <!-- Tooltip -->
+    <script src="assets/libs/tooltipster/tooltipster.bundle.min.js"></script>
+    <script src="assets/js/pages/tooltipster.init.js"></script>
+
+    <!-- Selectpicker js -->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+    <!-- Multiselect js -->
+    <script src="assets/libs/switchery/switchery.min.js"></script>
+    <script>
+        document.multiselect('#testSelect1, #testSelect2')
+            .setCheckBoxClick("checkboxAll", function(target, args) {
+                console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+            })
+            .setCheckBoxClick("1", function(target, args) {
+                console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+            });
+
+        function enable() {
+            document.multiselect('#testSelect1').setIsEnabled(true);
+        }
+
+        function disable() {
+            document.multiselect('#testSelect1').setIsEnabled(false);
+        }
+    </script>
+
+</body>
+
+
+</html>

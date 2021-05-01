@@ -1,0 +1,686 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>WATCO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- Selectpicker css -->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+
+    <!-- OpenLayer and Map CSS -->
+    <link href="assets/css/ol/ol.css" rel="stylesheet" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="custom-page">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom custom-navbar">
+
+            <!-- LOGO -->
+            <div class="logo-box custom-logo-box">
+                <a href="water-supply.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-dark.png" alt="" height="63">
+                        <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                    </span>
+                    <span class="logo-sm">
+                        <!-- <span class="logo-sm-text-dark">Z</span> -->
+                        <img src="assets/images/logo-sm.png" alt="" height="54">
+                    </span>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-6 mapFilterBase">
+
+                <div class="map-icon-home"><a href="water-supply.html"><img src="assets/images/icon-home.png"></a></div>
+
+                <div id="accordion" class="mapFilter">
+                    <div class="map-tab-fix">
+                        <a id="layerIcon" href="#collapseOne" class="text-dark collapsed" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne" title="Layer-List">
+                            <span class="d-block"><img src="assets/images/icon-layers.png"></span>
+                        </a>
+                        <a id="legendIcon" href="#collapseTwo" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo" title="Legends">
+                            <span class="d-block"><img src="assets/images/icon-legends.png"></span>
+                        </a>
+                        <a id="basemapIcon" href="#collapseThree" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree" title="Basemap">
+                            <span class="d-block"><img src="assets/images/icon-basemap.png"></span>
+                        </a>
+                        <a id="measureIcon" href="#collapseFour" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour" title="Measurement">
+                            <span class="d-block"><img src="assets/images/icon-measurement.png"></span>
+                        </a>
+                        <a id="queryIcon" href="#collapseFive" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFive" title="Query">
+                            <span class="d-block"><img src="assets/images/icon-query.png"></span>
+                        </a>
+                        <a id="queryIcon" href="#collapseSix" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseSix" title="Query">
+                            <span class="d-block"><img src="assets/images/icon-filter.png"></span>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="mb-0">
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Layers</h6>
+
+                                            <div id="accordion2">
+                                                <a id="" href="#collapse1" class="collapsed" data-toggle="collapse" aria-expanded="true" aria-controls="collapse1">
+                                                    <h6 class="mt-0 header-title map-title-secondary mb-3">Administrative Boundary</h6>
+                                                </a>
+                                                <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion2">
+                                                    <form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkAB1" type="checkbox">
+                                                                    <label for="chkAB1">Ward Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkAB2" type="checkbox">
+                                                                    <label for="chkAB2">Section Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkAB3" type="checkbox" checked="true">
+                                                                    <label for="chkAB3">Sub-Division Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkAB4" type="checkbox" checked="true">
+                                                                    <label for="chkAB4">Division Boundary</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <a id="" href="#collapse2" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapse2">
+                                                    <h6 class="mt-0 header-title map-title-secondary mb-4">Consumer</h6>
+                                                </a>
+                                                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion2">
+                                                    <form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkCM1" type="checkbox">
+                                                                    <label for="chkCM1">Consumer</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <a id="" href="#collapse3" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapse2">
+                                                    <h6 class="mt-0 header-title map-title-secondary mb-4">Water Asset</h6>
+                                                </a>
+                                                <div id="collapse3" class="collapse" aria-labelledby="heading2" data-parent="#accordion2">
+                                                    <form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA1" type="checkbox">
+                                                                    <label for="chkWA1">Reservoir</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA2" type="checkbox">
+                                                                    <label for="chkWA2">Pump</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA3" type="checkbox">
+                                                                    <label for="chkWA3">Pump House</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA4" type="checkbox">
+                                                                    <label for="chkWA4">Production Well</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA5" type="checkbox">
+                                                                    <label for="chkWA5">Valve</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA11" type="checkbox">
+                                                                    <label for="chkWA11">Intake</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA6" type="checkbox">
+                                                                    <label for="chkWA6">Flow Meter</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA7" type="checkbox">
+                                                                    <label for="chkWA7">WTP</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA12" type="checkbox">
+                                                                    <label for="chkWA12">Chlorinator</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA8" type="checkbox">
+                                                                    <label for="chkWA8">Clear Water Line</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA9" type="checkbox">
+                                                                    <label for="chkWA9">Raw Water Line</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkWA10" type="checkbox">
+                                                                    <label for="chkWA10">Water Supply Line</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <a id="" href="#collapse4" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapse3">
+                                                    <h6 class="mt-0 header-title map-title-secondary mb-4">Sewage Asset</h6>
+                                                </a>
+                                                <div id="collapse4" class="collapse" aria-labelledby="heading3" data-parent="#accordion2">
+                                                    <form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkSA1" type="checkbox">
+                                                                    <label for="chkSA1">Manhole</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkSA2" type="checkbox">
+                                                                    <label for="chkSA2">Discharge Point</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkSA3" type="checkbox">
+                                                                    <label for="chkSA3">Sewerage Pumps</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkSA4" type="checkbox">
+                                                                    <label for="chkSA4">Sewerage Pump_House</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkSA5" type="checkbox">
+                                                                    <label for="chkSA5">Sewerage STP</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="chkSA6" type="checkbox">
+                                                                    <label for="chkSA6">Sewer Line</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Legends</h6>
+                                            <div class="row">
+                                                <div class="col-md-12 ml-1">
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-01.png">
+                                                        <span>Ward Boundary</span>
+                                                    </div>
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-02.png">
+                                                        <span>Section Boundary</span>
+                                                    </div>
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-03.png">
+                                                        <span>Sub-Division Boundary</span>
+                                                    </div>
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-04.png">
+                                                        <span>Division Boundary</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Basemap</h6>
+                                            <form>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="chkBM1" type="checkbox">
+                                                            <label for="chkBM1">No Basemap</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="chkBM2" type="checkbox">
+                                                            <label for="chkBM2">Google Street</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="chkBM3" type="checkbox">
+                                                            <label for="chkBM3">Google Satellite</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="chkBM4" type="checkbox">
+                                                            <label for="chkBM4">Cartography</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="chkBM5" type="checkbox">
+                                                            <label for="chkBM5">Bing</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Measurement</h6>
+                                            <form>
+                                                <div class="row form-group">
+                                                    <div id="measurementDiv" class="col-md-12">
+                                                        <a id="areaTool" href="" class="text-dark collapsed" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne" title="areaTool">
+                                                            <span class="d-block"><img src="assets/images/icon-area.png"></span>
+                                                        </a>
+                                                        <a id="distanceTool" href="" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo" title="distanceTool">
+                                                            <span class="d-block"><img src="assets/images/icon-distance.png"></span>
+                                                        </a>
+                                                        <a id="clearTool" href="" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree" title="clearTool">
+                                                            <span class="d-block"><img src="assets/images/icon-clear.jpeg"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Query Builder</h6>
+                                            <form class="ml-1 mr-1">
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>District</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option value="">Angul</option>
+                                                            <option value="">Cuttack</option>
+                                                            <option value="">Mayurbhanj</option>
+                                                            <option value="">Puri</option>
+                                                            <option value="">Sundargarh</option>
+                                                            <option value="">Sambalpur</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Area</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control-sm" placeholder="Area">
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Village</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option value="">Kuhudi</option>
+                                                            <option value="">Satapura</option>
+                                                            <option value="">Mahakal Pada</option>
+                                                            <option value="">Nirmulia</option>
+                                                            <option value="">Raghunath Pur</option>
+                                                            <option value="">Baithi Kotha Pur</option>
+                                                            <option value="">Deula Sahi</option>
+                                                            <option value="">Radha Madhaba Pur</option>
+                                                            <option value="">Similia</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Choose</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox1" type="checkbox">
+                                                            <label for="checkbox1">Check One</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox2" type="checkbox">
+                                                            <label for="checkbox2">Check Two</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12 text-center">
+                                                        <button type="button" class="btn btn-success btn-xs waves-effect waves-light">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Filter</h6>
+                                            <form class="ml-1 mr-1">
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>District</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option value="">Angul</option>
+                                                            <option value="">Cuttack</option>
+                                                            <option value="">Mayurbhanj</option>
+                                                            <option value="">Puri</option>
+                                                            <option value="">Sundargarh</option>
+                                                            <option value="">Sambalpur</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Area</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control-sm" placeholder="Area">
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Village</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option value="">Kuhudi</option>
+                                                            <option value="">Satapura</option>
+                                                            <option value="">Mahakal Pada</option>
+                                                            <option value="">Nirmulia</option>
+                                                            <option value="">Raghunath Pur</option>
+                                                            <option value="">Baithi Kotha Pur</option>
+                                                            <option value="">Deula Sahi</option>
+                                                            <option value="">Radha Madhaba Pur</option>
+                                                            <option value="">Similia</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Choose</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox1" type="checkbox">
+                                                            <label for="checkbox1">Check One</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox2" type="checkbox">
+                                                            <label for="checkbox2">Check Two</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12 text-center">
+                                                        <button type="button" class="btn btn-success btn-xs waves-effect waves-light">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div><!--/accordion-->
+
+            </div>
+
+        </div>
+        <!-- end Topbar -->
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page custom-content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body custom-card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- Left Search -->
+                                            <button id="queryBtn" class="btn btn-sm btn-query fixin">
+                                                <div class="sptr"><i class="fa fa-search"></i></div>
+                                                <div class="sptr">S</div>
+                                                <div class="sptr">e</div>
+                                                <div class="sptr">a</div>
+                                                <div class="sptr">r</div>
+                                                <div class="sptr">c</div>
+                                                <div class="sptr">h</div>
+                                                <!-- <i class="fa fa-chevron-right rotate"></i> -->
+                                            </button>
+                                            <div id="queryContent" class="query-content" style="display:none">
+                                                <div class="card">
+                                                    <div class="card-body custom-card-body">
+                                                        <h6 class="mt-0 page-title mb-3">Query Builder</h6>
+                                                        <form>
+                                                            <div class="row form-group">
+                                                                <div class="col-md-3">
+                                                                    <label>District</label>
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                                        <option value="" selected>-- Select Division --</option>
+                                                                        <option value="">Angul</option>
+                                                                        <option value="">Cuttack</option>
+                                                                        <option value="">Mayurbhanj</option>
+                                                                        <option value="">Puri</option>
+                                                                        <option value="">Sundargarh</option>
+                                                                        <option value="">Sambalpur</option>
+                                                                    </select>
+                                                                    <span class="text-danger small"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-group">
+                                                                <div class="col-md-3">
+                                                                    <label>Area</label>
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <input type="text" class="form-control-sm" placeholder="Area">
+                                                                    <span class="text-danger small"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-group">
+                                                                <div class="col-md-3">
+                                                                    <label>Village</label>
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                                        <option value="" selected>-- Select --</option>
+                                                                        <option value="">Kuhudi</option>
+                                                                        <option value="">Satapura</option>
+                                                                        <option value="">Mahakal Pada</option>
+                                                                        <option value="">Nirmulia</option>
+                                                                        <option value="">Raghunath Pur</option>
+                                                                        <option value="">Baithi Kotha Pur</option>
+                                                                        <option value="">Deula Sahi</option>
+                                                                        <option value="">Radha Madhaba Pur</option>
+                                                                        <option value="">Similia</option>
+                                                                    </select>
+                                                                    <span class="text-danger small"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-group">
+                                                                <div class="col-md-3">
+                                                                    <label>Block</label>
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <input type="text" class="form-control-sm" placeholder="Area">
+                                                                    <span class="text-danger small"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-group">
+                                                                <div class="col-md-3">
+                                                                    <label>Choose</label>
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox71" type="checkbox">
+                                                                        <label for="checkbox71">Check One</label>
+                                                                    </div>
+                                                                    <div class="checkbox checkbox-primary">
+                                                                        <input id="checkbox72" type="checkbox">
+                                                                        <label for="checkbox72">Check Two</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row form-group">
+                                                                <div class="col-md-12 text-center">
+                                                                    <button type="button" class="btn btn-success btn-xs waves-effect waves-light">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--Mapview Section-->
+                                            <div class="fixHeightLeft panel">
+                                                <a href="javascript:void(0)" onclick="openFullscreen();" class="btn-fullscreen" role="button" title="Toggle fullscreen"><i class="mdi mdi-fullscreen"></i></a>
+                                                <div id="mapDiv"></div>
+                                                <div id="popup" class="ol-popup">
+                                                    <h5 id="popup-header"></h5>
+                                                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                                                    <div id="popup-content" class="ol-popup-content"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- OpenLayer and Map js -->
+    <script src="assets/js/ol/ol.js" type="text/javascript"></script>
+    <script src="assets/js/map/view.js"></script>
+
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/libs/custombox/custombox.min.js"></script>
+
+    <!-- Init js-->
+    <script src="assets/js/pages/form-pickers.init.js"></script>
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/pages/portlet.init.js"></script>
+
+    <!-- Tooltip -->
+    <script src="assets/libs/tooltipster/tooltipster.bundle.min.js"></script>
+    <script src="assets/js/pages/tooltipster.init.js"></script>
+
+    <!-- Selectpicker js -->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+    <!-- Multiselect js -->
+    <script src="assets/libs/switchery/switchery.min.js"></script>
+</body>
+</html>

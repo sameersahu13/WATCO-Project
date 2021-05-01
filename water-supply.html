@@ -1,0 +1,757 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>WATCO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- Table datatable css -->
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.html" rel="stylesheet" type="text/css" />
+
+    <!-- Picker css -->
+    <link href="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Selectpicker css -->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+
+    <!-- Multiselect css -->
+    <link href="assets/css/multiselect.css" rel="stylesheet" />
+    <script src="assets/js/multiselect.min.js"></script>
+
+    <!-- C3 Chart css -->
+    <link href="assets/libs/c3/c3.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Chartist Chart CSS -->
+    <link rel="stylesheet" href="assets/libs/chartist/chartist.min.css">
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                <li><div id="date-div"></div></li>
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle  waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="mdi mdi-bell noti-icon"></i>
+                        <span class="badge badge-success rounded-circle noti-icon-badge">4</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                            <h5 class="font-16 m-0">
+                                <span class="float-right">
+                                    <a href="#" class="text-dark">
+                                        <small>Clear All</small>
+                                    </a>
+                                </span>Notification
+                            </h5>
+                        </div>
+
+                        <div class="slimscroll noti-scroll">
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-success">
+                                    <i class="mdi mdi-settings-outline"></i>
+                                </div>
+                                <p class="notify-details">
+                                    New settings
+                                    <small class="text-muted">There are new settings available</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-info">
+                                    <i class="mdi mdi-bell-outline"></i>
+                                </div>
+                                <p class="notify-details">
+                                    Updates
+                                    <small class="text-muted">There are 2 new updates available</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-danger">
+                                    <i class="mdi mdi-account-plus"></i>
+                                </div>
+                                <p class="notify-details">
+                                    New user
+                                    <small class="text-muted">You have 10 unread messages</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-info">
+                                    <i class="mdi mdi-comment-account-outline"></i>
+                                </div>
+                                <p class="notify-details">
+                                    Caleb Flakelar commented on Admin
+                                    <small class="text-muted">4 days ago</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-secondary">
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                                <p class="notify-details">
+                                    Carlos Crouch liked
+                                    <b>Admin</b>
+                                    <small class="text-muted">13 days ago</small>
+                                </p>
+                            </a>
+                        </div>
+
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                            See all Notification
+                            <i class="fi-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </li>
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <!-- <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle"> -->
+                        <span class="user-noty"><img src="assets/images/users/avatar-1.jpg"></span>
+                        <span class="d-none d-sm-inline-block ml-1">Tarini Prasad</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                        <!-- item-->
+                        <a href="profile-settings.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-settings-outline"></i>
+                            <span>Profile Settings</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <!-- item-->
+                        <a href="change-password.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-key-outline"></i>
+                            <span>Change Password</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-logout-variant"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="dashboard.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <img src="assets/images/logo.png" alt="" height="63">
+                        <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                    </span>
+                    <span class="logo-sm">
+                        <!-- <span class="logo-sm-text-dark">Z</span> -->
+                        <img src="assets/images/logo-sm.png" alt="" height="54">
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect">
+                        <i class="mdi mdi-menu-open "></i>
+                    </button>
+                </li>
+                <li>
+                    <h4 class="top-title">ASSET INFORMATION MANAGEMENT SYSTEM</h4>
+                </li>
+            </ul>
+        </div>
+        <!-- end Topbar -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="slimscroll-menu">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul class="metismenu" id="side-menu">
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light active">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span> Dashboard </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="water-supply.html">Water Supply</a></li>
+                                <li><a href="#">Swerage Service</a></li>
+                                <li><a href="#">Dept. Pilot Zone</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="map.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-map"></i>
+                                <span> Map View </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-account-badge-horizontal-outline"></i>
+                                <span> MIS Report </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="mis-report.html">Asset Information</a></li>
+                                <li><a href="#">Consumer Information</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-pencil-box-multiple"></i>
+                                <span> Update Info </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="consumer.html">Consumer</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-account-multiple-outline"></i>
+                                <span> User Management </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="view-user.html">View User</a></li>
+                                <li><a href="manage-user.html">Manage User</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                                        <li class="breadcrumb-item">Water Supply</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Water Supply</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row widget-dash-section">
+                                <div class="col-md-12">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow"><strong>Asset Information</strong></span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-danger" data-plugin="counterup">225</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row widget-dash-section">
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Intake</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-primary" data-plugin="counterup">12</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">WTP</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-success" data-plugin="counterup">9</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">PW</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-warning" data-plugin="counterup">16</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row widget-dash-section">
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Pumps</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-primary" data-plugin="counterup">24</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Pump Houses</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-success" data-plugin="counterup">28</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Valves</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-warning" data-plugin="counterup">42</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row widget-dash-section">
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Bulk Meter</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-primary" data-plugin="counterup">28</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Chloninator</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-success" data-plugin="counterup">23</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Reservoirs</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-warning" data-plugin="counterup">4</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row widget-dash-section">
+                                <div class="col-md-12">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Pipeline in Kms</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-primary" data-plugin="counterup">458</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row widget-dash-section">
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Raw Water (kms)</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-primary" data-plugin="counterup">20</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Clear Water (Kms)</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-success" data-plugin="counterup">7</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Transmission Main (Kms)</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-warning" data-plugin="counterup">12</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row widget-dash-section">
+                                <div class="col-md-12">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow"><strong>Consumer Information</strong></span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-danger" data-plugin="counterup">3609</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row widget-dash-section">
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Domestic</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-purple" data-plugin="counterup">2254</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Institutional</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-info" data-plugin="counterup">38</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Commercial</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-secondary" data-plugin="counterup">53</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row widget-dash-section">
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Industrial</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-purple" data-plugin="counterup">12</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">GA</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-info" data-plugin="counterup">7</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-dash-box">
+                                        <div class="widget-dash-content">
+                                            <span class="text-overflow">Others</span>
+                                            <span class="text-white float-right dash-font-lg"><span class="pl-2 pr-2 bg-secondary" data-plugin="counterup">1245</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-box">
+                                <div class="demo-box">
+                                    <h4 class="header-title row">
+                                        <div class="col-md-9">
+                                            Section wise Pipeline Status
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select class="form-control">
+                                                <option selected="selected">-- Select --</option>
+                                                <option>Water Supply</option>
+                                                <option>Raw Water</option>
+                                                <option>Clear Water</option>
+                                            </select>
+                                        </div>
+                                    </h4>
+                                    <div id="chart" class="" style="height:300px"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">                        
+                        <div class="col-md-6">
+                            <div class="card-box">
+                                <div class="demo-box">
+                                    <h4 class="header-title">Year wise Pipeline Installation</h4>
+                                    <div id="horizontal-bar-chart" class="ct-chart ct-golden-section" style="height:300px"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-md-6">
+                            <div class="card-box">
+                                <div class="demo-box">
+                                    <h4 class="header-title">WTP Capacity</h4>
+                                    <div id="distributed-series" class="ct-chart ct-golden-section" style="height:300px"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Sl. No.</th>
+                                                            <th>Name</th>
+                                                            <th>Capacity</th>
+                                                            <th>Secton Cover</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Kuakhai</td>
+                                                            <td>-</td>
+                                                            <td>Section Name</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Mundali</td>
+                                                            <td>-</td>
+                                                            <td>Section Name</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Daya River</td>
+                                                            <td>-</td>
+                                                            <td>Section Name</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>PW</td>
+                                                            <td>-</td>
+                                                            <td>Section Name</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>Koel River</td>
+                                                            <td>-</td>
+                                                            <td>Section Name</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7671816.78977033!2d79.93986037750877!3d20.13386855460047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a226aece9af3bfd%3A0x133625caa9cea81f!2sOdisha!5e0!3m2!1sen!2sin!4v1615990422517!5m2!1sen!2sin" width="100%" height="350px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            &copy; 2021. Water Corporation of Odisha (WATCO). All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/libs/custombox/custombox.min.js"></script>
+
+    <!-- Datatable plugin js -->
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.html"></script>
+    <script src="assets/libs/datatables/copy_csv_xls_pdf.swf"></script>
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+    <!-- Picker js-->
+    <script src="assets/libs/moment/moment.min.js"></script>
+    <script src="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/clockpicker/bootstrap-clockpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Init js-->
+    <script src="assets/js/pages/form-pickers.init.js"></script>
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!--C3 Chart-->
+    <script src="assets/libs/d3/d3.min.js"></script>
+    <script src="assets/libs/c3/c3.min.js"></script>
+    <script src="assets/js/pages/c3.init.js"></script>
+
+    <!--Chartist Chart-->
+    <script src="assets/libs/chartist/chartist.min.js"></script>
+    <script src="assets/libs/chartist/chartist-plugin-tooltip.min.js"></script>
+    <script src="assets/js/pages/chartist.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/pages/portlet.init.js"></script>
+
+    <!-- Tooltip -->
+    <script src="assets/libs/tooltipster/tooltipster.bundle.min.js"></script>
+    <script src="assets/js/pages/tooltipster.init.js"></script>
+
+    <!-- Selectpicker js -->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+    <!-- Multiselect js -->
+    <script src="assets/libs/switchery/switchery.min.js"></script>
+    <script>
+        document.multiselect('#testSelect1, #testSelect2')
+            .setCheckBoxClick("checkboxAll", function (target, args) {
+                console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+            })
+            .setCheckBoxClick("1", function (target, args) {
+                console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+            });
+
+        function enable() {
+            document.multiselect('#testSelect1').setIsEnabled(true);
+        }
+
+        function disable() {
+            document.multiselect('#testSelect1').setIsEnabled(false);
+        }
+    </script>
+    <script type="text/javascript">
+        const dateDiv = document.getElementById('date-div');
+
+        function myDateFunction() {
+          const now = new Date();
+          const nowStr = now.toLocaleString('en-IN');
+          dateDiv.innerHTML = nowStr;
+        }
+        setInterval(myDateFunction, 1000);
+    </script>
+
+</body>
+
+
+</html>

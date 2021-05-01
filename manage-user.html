@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>WATCO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- Table datatable css -->
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.html" rel="stylesheet" type="text/css" />
+
+    <!-- Picker css -->
+    <link href="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Selectpicker css -->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+
+    <!-- Multiselect css -->
+    <link href="assets/css/multiselect.css" rel="stylesheet" />
+    <script src="assets/js/multiselect.min.js"></script>
+
+    <!-- C3 Chart css -->
+    <link href="assets/libs/c3/c3.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle  waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="mdi mdi-bell noti-icon"></i>
+                        <span class="badge badge-success rounded-circle noti-icon-badge">4</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                            <h5 class="font-16 m-0">
+                                <span class="float-right">
+                                    <a href="#" class="text-dark">
+                                        <small>Clear All</small>
+                                    </a>
+                                </span>Notification
+                            </h5>
+                        </div>
+
+                        <div class="slimscroll noti-scroll">
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-success">
+                                    <i class="mdi mdi-settings-outline"></i>
+                                </div>
+                                <p class="notify-details">New settings
+                                    <small class="text-muted">There are new settings available</small>
+                                </p>
+                            </a>
+                    
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-info">
+                                    <i class="mdi mdi-bell-outline"></i>
+                                </div>
+                                <p class="notify-details">Updates
+                                    <small class="text-muted">There are 2 new updates available</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-danger">
+                                    <i class="mdi mdi-account-plus"></i>
+                                </div>
+                                <p class="notify-details">New user
+                                    <small class="text-muted">You have 10 unread messages</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-info">
+                                    <i class="mdi mdi-comment-account-outline"></i>
+                                </div>
+                                <p class="notify-details">Caleb Flakelar commented on Admin
+                                    <small class="text-muted">4 days ago</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-secondary">
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                                <p class="notify-details">Carlos Crouch liked
+                                    <b>Admin</b>
+                                    <small class="text-muted">13 days ago</small>
+                                </p>
+                            </a>
+                        </div>
+
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                            See all Notification
+                            <i class="fi-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </li>
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <!-- <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle"> -->
+                        <span class="user-noty"><img src="assets/images/users/avatar-1.jpg"></span>
+                        <span class="d-none d-sm-inline-block ml-1">Tarini Prasad</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                        
+                        <!-- item-->
+                        <a href="profile-settings.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-settings-outline"></i>
+                            <span>Profile Settings</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <!-- item-->
+                        <a href="change-password.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-key-outline"></i>
+                            <span>Change Password</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-logout-variant"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="dashboard.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <img src="assets/images/logo.png" alt="" height="63">
+                        <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                    </span>
+                    <span class="logo-sm">
+                        <!-- <span class="logo-sm-text-dark">Z</span> -->
+                        <img src="assets/images/logo-sm.png" alt="" height="54">
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect">
+                        <i class="mdi mdi-menu-open "></i>
+                    </button>
+                </li>
+                <li>
+                    <h4 class="top-title">ASSET INFORMATION MANAGEMENT SYSTEM</h4>
+                </li>
+            </ul>
+        </div>
+        <!-- end Topbar --> 
+        
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+                <div class="slimscroll-menu">
+    
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+    
+                        <ul class="metismenu" id="side-menu">
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Dashboard </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="dashboard.html">Water Supply</a></li>
+                                    <li><a href="#">Swerage Service</a></li>
+                                    <li><a href="#">Drink From Tap</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="map.html" class="waves-effect waves-light">
+                                    <i class="mdi mdi-map"></i>
+                                    <span> Map View </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="mdi mdi-account-badge-horizontal-outline"></i>
+                                    <span> MIS Report </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="mis-report.html">Asset Information</a></li>
+                                    <li><a href="#">Consumer Information</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="mdi mdi-pencil-box-multiple"></i>
+                                    <span> Update Info </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="consumer.html">Consumer</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light active">
+                                    <i class="mdi mdi-account-multiple-outline"></i>
+                                    <span> User Management </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="view-user.html">View User</a></li>
+                                    <li><a href="manage-user.html">Manage User</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+    
+                    </div>
+                    <!-- End Sidebar -->
+    
+                </div>
+                <!-- Sidebar -left -->
+    
+            </div>
+            <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard </a></li>
+                                        <li class="breadcrumb-item active">Manage User</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Manage User</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="true">
+                                                <span class="d-block d-sm-none"><i class="fas fa-user"></i></span>
+                                                <span class="d-none d-sm-block">New User</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="role-tab" data-toggle="tab" href="#role" role="tab" aria-controls="role" aria-selected="false">
+                                                <span class="d-block d-sm-none"><i class="fas fa-user-plus"></i></span>
+                                                <span class="d-none d-sm-block">New Role</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="privilege-tab" data-toggle="tab" href="#privilege" role="tab" aria-controls="privilege" aria-selected="false">
+                                                <span class="d-block d-sm-none"><i class="fas fa-users"></i></span>
+                                                <span class="d-none d-sm-block">New Privilege</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="user" role="tabpanel" aria-labelledby="user-tab">
+                                            <form>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Name <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" placeholder="Enter Name">
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Contact No. <span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" placeholder="Contact Number">
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Email ID</label>
+                                                        <input type="email" class="form-control" placeholder="Enter Email ID">
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Designation <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Designation --</option>
+                                                            <option>Head office</option>
+                                                            <option>Branch office</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>District <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select District --</option>
+                                                            <option>Khordha</option>
+                                                            <option>Cuttack office</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Region <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Region --</option>
+                                                            <option>Bhubaneswar</option>
+                                                            <option>Khordha</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Division <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Division --</option>
+                                                            <option>Division-I</option>
+                                                            <option>Division-II</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Sub-Division <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Sub-Division --</option>
+                                                            <option>Sub-Division-I</option>
+                                                            <option>Sub-Division-II</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Section <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Section --</option>
+                                                            <option>Section-I</option>
+                                                            <option>Section-II</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Ward No. <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Ward --</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Role <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Role --</option>
+                                                            <option>Admin</option>
+                                                            <option>User</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Privilege <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select Privilage --</option>
+                                                            <option>Edit</option>
+                                                            <option>Update</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Upload Image</label>
+                                                        <input type="file" class="form-control" placeholder="Upload Image">
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-md-12 text-center">
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light">Add</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane show" id="role" role="tabpanel" aria-labelledby="role-tab">
+                                            <form>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>User Name <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select User --</option>
+                                                            <option>Anil</option>
+                                                            <option>Tarini</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Add Role <span class="text-danger">*</span></label>
+                                                        <select class="form-control" id='testSelect1' multiple>
+                                                            <option value='1' selected="selected">Admin</option>
+                                                            <option value='2'>Director</option>
+                                                            <option value='3'>Ast. Director</option>
+                                                            <option value='4'>Section Incharge</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-md-12 text-center">
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light">Add</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="privilege" role="tabpanel" aria-labelledby="privilege-tab">
+                                            <form>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>User Name <span class="text-danger">*</span></label>
+                                                        <select class="form-control">
+                                                            <option selected="selected">-- Select User --</option>
+                                                            <option>Anil</option>
+                                                            <option>Tarini</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label>Add Privilege <span class="text-danger">*</span></label>
+                                                        <select class="form-control" id='testSelect2' multiple>
+                                                            <option value='1' selected="selected">Write</option>
+                                                            <option value='2'>Read</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-md-12 text-center">
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light">Add</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+
+            
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            &copy; 2021. Water Corporation of Odisha (WATCO). All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalViewUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">User Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td width="25%"><strong>Name :</strong></td>
+                                    <td width="25%">Tarini Prasad</td>
+                                    <td width="25%"><strong>User Type :</strong></td>
+                                    <td width="25%">Administrator</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Role :</strong></td>
+                                    <td>Admin</td>
+                                    <td><strong>Status :</strong></td>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Contact No. :</strong></td>
+                                    <td>9583109860</td>
+                                    <td><strong>Email ID :</strong></td>
+                                    <td>tariniprasad11@gmail.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modal -->
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/libs/custombox/custombox.min.js"></script>
+
+    <!-- Datatable plugin js -->
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.html"></script>
+    <script src="assets/libs/datatables/copy_csv_xls_pdf.swf"></script>
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+    <!-- Picker js-->
+    <script src="assets/libs/moment/moment.min.js"></script>
+    <script src="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/clockpicker/bootstrap-clockpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Init js-->
+    <script src="assets/js/pages/form-pickers.init.js"></script>
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!--C3 Chart-->
+    <script src="assets/libs/d3/d3.min.js"></script>
+    <script src="assets/libs/c3/c3.min.js"></script>
+
+    <!-- Init js -->
+    <script src="assets/js/pages/c3.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/pages/portlet.init.js"></script>
+
+    <!-- Tooltip -->
+    <script src="assets/libs/tooltipster/tooltipster.bundle.min.js"></script>
+    <script src="assets/js/pages/tooltipster.init.js"></script>
+
+    <!-- Selectpicker js -->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+    <!-- Multiselect js -->
+    <script src="assets/libs/switchery/switchery.min.js"></script>
+    <script>
+        document.multiselect('#testSelect1, #testSelect2')
+            .setCheckBoxClick("checkboxAll", function(target, args) {
+                console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+            })
+            .setCheckBoxClick("1", function(target, args) {
+                console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+            });
+
+        function enable() {
+            document.multiselect('#testSelect1').setIsEnabled(true);
+        }
+
+        function disable() {
+            document.multiselect('#testSelect1').setIsEnabled(false);
+        }
+    </script>
+
+</body>
+
+
+</html>

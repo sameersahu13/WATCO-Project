@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>WATCO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- Table datatable css -->
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.html" rel="stylesheet" type="text/css" />
+
+    <!-- Picker css -->
+    <link href="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Selectpicker css -->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+
+    <!-- Multiselect css -->
+    <link href="assets/css/multiselect.css" rel="stylesheet" />
+    <script src="assets/js/multiselect.min.js"></script>
+
+    <!-- C3 Chart css -->
+    <link href="assets/libs/c3/c3.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="custom-page">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+        
+        <!-- Topbar Start -->
+        <div class="navbar-custom custom-navbar">
+            
+            <!-- LOGO -->
+            <div class="logo-box custom-logo-box">
+                <a href="dashboard.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-dark.png" alt="" height="63">
+                        <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                    </span>
+                    <span class="logo-sm">
+                        <!-- <span class="logo-sm-text-dark">Z</span> -->
+                        <img src="assets/images/logo-sm.png" alt="" height="54">
+                    </span>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-6 mapFilterBase">
+                
+                <div id="accordion" class="mapFilter">
+                    <div class="map-tab-fix">
+                        <a id="" href="#collapseOne" class="text-dark collapsed" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="d-block"><img src="assets/images/icon-layers.png"></span>
+                        </a>
+                        <a id="" href="#collapseTwo" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="d-block"><img src="assets/images/icon-legends.png"></span>
+                        </a>
+                        <a id="" href="#collapseThree" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+                            <span class="d-block"><img src="assets/images/icon-basemap.png"></span>
+                        </a>
+                        <a id="" href="#collapseFour" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
+                            <span class="d-block"><img src="assets/images/icon-measurement.png"></span>
+                        </a>
+                        <a id="" href="#collapseFive" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFive">
+                            <span class="d-block"><img src="assets/images/icon-query.png"></span>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="mb-0">
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Layers</h6>
+                                            
+                                            <div id="accordion2">
+                                                <a id="" href="#collapse1" class="collapsed" data-toggle="collapse" aria-expanded="true" aria-controls="collapse1">
+                                                    <h6 class="mt-0 header-title map-title-secondary mb-3">Heading One</h6>
+                                                </a>
+                                                <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion2">
+                                                    <form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox11" type="checkbox">
+                                                                    <label for="checkbox11">State Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox12" type="checkbox">
+                                                                    <label for="checkbox12">District Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox13" type="checkbox">
+                                                                    <label for="checkbox13">Block Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox14" type="checkbox">
+                                                                    <label for="checkbox14">GP Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox15" type="checkbox">
+                                                                    <label for="checkbox15">Village Boundary</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <a id="" href="#collapse2" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapse2">
+                                                    <h6 class="mt-0 header-title map-title-secondary mb-4">Heading Two</h6>
+                                                </a>
+                                                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion2">
+                                                    <form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox31" type="checkbox">
+                                                                    <label for="checkbox31">State Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox32" type="checkbox">
+                                                                    <label for="checkbox32">District Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox33" type="checkbox">
+                                                                    <label for="checkbox33">Block Boundary</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <a id="" href="#collapse3" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="collapse3">
+                                                    <h6 class="mt-0 header-title map-title-secondary mb-4">Heading Three</h6>
+                                                </a>
+                                                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion2">
+                                                    <form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox41" type="checkbox">
+                                                                    <label for="checkbox41">State Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox42" type="checkbox">
+                                                                    <label for="checkbox42">District Boundary</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input id="checkbox43" type="checkbox">
+                                                                    <label for="checkbox43">Block Boundary</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>                                                               
+                                             </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Legends</h6>
+                                            <div class="row">
+                                                <div class="col-md-12 ml-1">
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-01.png">
+                                                        <span>GP Boundary</span>
+                                                    </div>
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-02.png">
+                                                        <span>Village Boundary</span>
+                                                    </div>
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-03.png">
+                                                        <span>Check Dam</span>
+                                                    </div>
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-04.png">
+                                                        <span>Water Resources</span>
+                                                    </div>
+                                                    <div class="legendbox">
+                                                        <img src="assets/images/legend-05.png">
+                                                        <span>Water Tank</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Basemap</h6>
+                                            <form>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox21" type="checkbox">
+                                                            <label for="checkbox21">Terrian</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox22" type="checkbox">
+                                                            <label for="checkbox22">OSM</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox23" type="checkbox">
+                                                            <label for="checkbox23">Cartography</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Measurement</h6>
+                                            <form>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                    <div class="fixHeightRight">
+                                        <button class="btn-sm btn-danger closeBtn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><span aria-hidden="true">×</span></button>
+                                        <div class="card-body custom-card-body">
+                                            <h6 class="mt-0 page-title mb-3">Query Builder</h6>
+                                            <form class="ml-1 mr-1">
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>District</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option value="">Angul</option>
+                                                            <option value="">Cuttack</option>
+                                                            <option value="">Mayurbhanj</option>
+                                                            <option value="">Puri</option>
+                                                            <option value="">Sundargarh</option>
+                                                            <option value="">Sambalpur</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Area</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control-sm" placeholder="Area">
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Village</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select class="form-control form-control-sm selectpicker" name="" data-size="" data-live-search="true" data-title="" id="" data-width="100%">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option value="">Kuhudi</option>
+                                                            <option value="">Satapura</option>
+                                                            <option value="">Mahakal Pada</option>
+                                                            <option value="">Nirmulia</option>
+                                                            <option value="">Raghunath Pur</option>
+                                                            <option value="">Baithi Kotha Pur</option>
+                                                            <option value="">Deula Sahi</option>
+                                                            <option value="">Radha Madhaba Pur</option>
+                                                            <option value="">Similia</option>
+                                                        </select>
+                                                        <span class="text-danger small"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-3">
+                                                        <label>Choose</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox1" type="checkbox">
+                                                            <label for="checkbox1">Check One</label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary">
+                                                            <input id="checkbox2" type="checkbox">
+                                                            <label for="checkbox2">Check Two</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12 text-center">
+                                                        <button type="button" class="btn btn-success btn-xs waves-effect waves-light">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div><!--/accordion-->
+                    
+            </div>
+
+        </div>
+        <!-- end Topbar --> 
+        
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page custom-content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body custom-card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="fixHeightLeft panel">
+												<div id="mapDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+	
+	<!-- OpenLayer js -->
+	<script src="https://openlayers.org/en/v5.3.0/build/ol.js" type="text/javascript"></script>
+	<script src="assets/js/map/view.js"></script>
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/libs/custombox/custombox.min.js"></script>
+
+    <!-- Datatable plugin js -->
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.html"></script>
+    <script src="assets/libs/datatables/copy_csv_xls_pdf.swf"></script>
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+    <!-- Picker js-->
+    <script src="assets/libs/moment/moment.min.js"></script>
+    <script src="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/clockpicker/bootstrap-clockpicker.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Init js-->
+    <script src="assets/js/pages/form-pickers.init.js"></script>
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!--C3 Chart-->
+    <script src="assets/libs/d3/d3.min.js"></script>
+    <script src="assets/libs/c3/c3.min.js"></script>
+
+    <!-- Init js -->
+    <script src="assets/js/pages/c3.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/pages/portlet.init.js"></script>
+
+    <!-- Tooltip -->
+    <script src="assets/libs/tooltipster/tooltipster.bundle.min.js"></script>
+    <script src="assets/js/pages/tooltipster.init.js"></script>
+
+    <!-- Selectpicker js -->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+    <!-- Multiselect js -->
+    <script src="assets/libs/switchery/switchery.min.js"></script>
+    <script>
+        document.multiselect('#testSelect1, #testSelect2')
+            .setCheckBoxClick("checkboxAll", function(target, args) {
+                console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+            })
+            .setCheckBoxClick("1", function(target, args) {
+                console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+            });
+
+        function enable() {
+            document.multiselect('#testSelect1').setIsEnabled(true);
+        }
+
+        function disable() {
+            document.multiselect('#testSelect1').setIsEnabled(false);
+        }
+    </script>
+
+</body>
+
+
+</html>
