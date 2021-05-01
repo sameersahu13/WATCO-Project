@@ -1,0 +1,352 @@
+/**
+ * fullPage 2.6.6
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html.fp-enabled,
+.fp-enabled body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#superContainer {
+    height: 100%;
+    position: relative;
+
+    /* Touch detection for Windows 8 */
+    -ms-touch-action: none;
+
+    /* IE 11 on Windows Phone 8.1*/
+    touch-action: none;
+}
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+.fp-slide {
+    float: left;
+}
+.fp-slide, .fp-slidesContainer {
+    height: 100%;
+    display: block;
+}
+.fp-slides {
+    z-index:1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+    transition: all 0.3s ease-out;
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #fff transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #fff;
+}
+.fp-scrollable {
+    overflow: scroll;
+}
+.fp-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+}
+#fp-nav.right {
+    right: 5px;
+}
+#fp-nav.left {
+    /*left: 5px;*/
+    left: 0px;
+}
+.fp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.fp-slidesNav.bottom {
+    bottom: 17px;
+}
+.fp-slidesNav.top {
+    top: 17px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    /*width: 14px;
+    margin: 7px;*/
+    height: 40px;
+    width: 38px;
+    margin: 0px;
+    position:relative;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    border-radius: 0 25px 25px 0;
+    transition: 0.35s all ease-in-out;
+    -webkit-transition: 0.35s all ease-in-out;
+    -moz-transition: 0.35s all ease-in-out;
+    -ms-transition: 0.35s all ease-in-out;
+    -o-transition: 0.35s all ease-in-out;
+}
+
+#fp-nav ul li:nth-child(1){
+    /*background-color: #f58634;*/
+    background-color: rgba(0,0,0,0.435);
+}
+#fp-nav ul li:nth-child(2){
+    /*background-color: #00af91;*/
+    background-color: rgba(0,0,0,0.435);
+}
+#fp-nav ul li:nth-child(3){
+    /*background-color: #c70039;*/
+    background-color: rgba(0,0,0,0.435);
+}
+#fp-nav ul li:hover{
+    width: 110px;
+}
+#fp-nav ul li:nth-child(1) a.active{
+    width: 110px;
+    /*background-color: #f58634;*/
+    background-color: rgba(0,0,0,0.635);
+} 
+#fp-nav ul li:nth-child(2) a.active{
+    width: 110px;
+    /*background-color: #00af91;*/
+    background-color: rgba(0,0,0,0.635);
+}
+#fp-nav ul li:nth-child(3) a.active{
+    width: 110px;
+    /*background-color: #c70039;*/
+    background-color: rgba(0,0,0,0.635);
+}
+
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    /*width: 50px;*/
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0 25px 25px 0;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    /*height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+    width: 65px;
+    background-color: rgba(255,255,255,0.925);
+    box-shadow: 2px 2px 2px #606060;*/
+    width: 105px;
+ }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    /*border-radius: 50%;*/
+    position: absolute;
+    z-index: 1;
+    /*height: 4px;
+    width: 4px;*/
+    border: 0;
+    /*background: #333;*/
+    /*left: 15%;
+    top: 50%;
+    margin: -2px 0 0 -2px;*/
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    /*border-radius: 2px;*/
+    /*width: 25px;
+    height: 5px;
+    background-color: rgba(255,255,255,0.535);*/
+    width: 100%;
+    height: 100%;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    /*width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;*/
+    /*width: 45px;
+    background-color: rgba(255,255,255,0.925);*/
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    /*top: -12px;*/
+    top: 0px;
+    padding-top: 7px;
+    margin-left: 5px;
+    color: #fff;
+    font-size: 17px;
+    white-space: nowrap;
+    max-width: 130px;
+    overflow: hidden;
+    display: block;
+    /*opacity: 0;
+    width: 0;*/
+    width: 0px;
+    text-shadow: 1px 1px 2px #000;
+    transition: 0.70s all ease-in-out;
+    -webkit-transition: 0.70s all ease-in-out;
+    -moz-transition: 0.70s all ease-in-out;
+    -ms-transition: 0.70s all ease-in-out;
+    -o-transition: 0.70s all ease-in-out;
+}
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+    /*-webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;*/
+    width: 103px;
+    opacity: 1;
+    z-index: 9;
+}
+#fp-nav ul li .fp-tooltip.right {
+    right: 2px;
+}
+#fp-nav ul li .fp-tooltip.left {
+    left: 2px;
+}
+#fp-nav ul li:nth-child(1) .fp-tooltip::after{
+    content: "\f1b2";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+}
+#fp-nav ul li:nth-child(2) .fp-tooltip::after{
+    content: "\f05a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+}
+#fp-nav ul li:nth-child(3) .fp-tooltip::after{
+    content: "\f041";
+    /*content: "\f279";*/
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+}
+#fp-nav.fp-show-active a.active + .fp-tooltip::after{
+    position: fixed;
+    left: 72px;
+}
+#fp-nav ul li .fp-tooltip::after{
+    font-size: 24px;
+    transition: 0.70s all ease-in-out;
+    -webkit-transition: 0.70s all ease-in-out;
+    -moz-transition: 0.70s all ease-in-out;
+    -ms-transition: 0.70s all ease-in-out;
+    -o-transition: 0.70s all ease-in-out;
+    display: inline-block;
+    position: fixed;
+    left: 0px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(0,91,163,0.675);
+    margin-top: -5px;
+}
+#fp-nav ul li:hover .fp-tooltip::after{
+    position: fixed;
+    left: 72px;
+    transition: 0.70s all ease-in-out;
+    -webkit-transition: 0.70s all ease-in-out;
+    -moz-transition: 0.70s all ease-in-out;
+    -ms-transition: 0.70s all ease-in-out;
+    -o-transition: 0.70s all ease-in-out;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+/*--------- Responsive ---------*/
+@media(max-width: 830px){
+    #fp-nav.fp-show-active a.active + .fp-tooltip, #fp-nav ul li a.active span{
+        width: 0px;
+    }
+    #fp-nav.fp-show-active a.active + .fp-tooltip::after{
+        left: 7px;
+    }
+    #fp-nav ul li:nth-child(1) a.active, 
+    #fp-nav ul li:nth-child(2) a.active, 
+    #fp-nav ul li:nth-child(3) a.active{
+        width: 44px;
+    }
+    #fp-nav ul li:hover .fp-tooltip::after{
+        left: 7px;
+    }
+    #fp-nav ul li:hover .fp-tooltip{
+        width: 0px;
+    }
+    #fp-nav ul li a:hover{
+        width: 0px;
+    }
+    #fp-nav ul li:hover{
+        width: 44px;
+    }
+}
+
