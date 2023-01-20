@@ -1,2 +1,0 @@
-# WATCO
-WATCO Project Repository
